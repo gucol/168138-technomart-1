@@ -11,7 +11,6 @@ h2 {
 	font-size: 30px;
 	line-height: 30px;
 	color: #32425c;
-	font-weight: ;
 	text-transform: uppercase;	
 }
 
@@ -22,4 +21,230 @@ h4 {
 	color: #000000;
 	font-weight: bold;
 	text-transform: uppercase;
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*HEADER*/
+.header-top {
+	background: #293449;
+}
+
+.header-logo, .hdr-gadget {
+	 float: right;
+}
+
+.hdr-gadget {
+	width: 720px;
+}
+
+.search-input {
+	display: inline-block;
+	width: 270px;
+}
+
+.header-bottom {
+	background: #f1f5f7;
+}
+
+.hdr-bttm-block {
+	float: left;
+}
+
+.hdr-bttm-block p {
+	width: 200px;
+}
+
+.hdr-contacts {
+	width: 268px;
+}
+
+.main-menu {
+	clear: both;
+}
+.main-menu li {
+	display: inline-block;
+	background: #32425c;
+}
+
+/*MAIN INDEX*/
+
+/*promo-block index*/
+.promo .item {
+	width: 300px;
+	min-height: 120px;
+	display: inline-block;
+	margin: 0;
+}
+
+.promo-slider {
+	width: 620px;
+	float: left;
+}
+.promo-slider .slider-1 {
+	position: relative;
+}
+
+.slider-1 h2, .slider-1 p, .slider-1 a {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.promo-slider .slider-2 {
+	display: none;
+}
+
+/*popular-block index*/
+.sect-hdr {
+	background: #f7f3ec;
+}
+.sect-hdr h2 {
+	float: left;
+}
+.sect-hdr a {
+	float: right;
+}
+
+.popular article {
+	display: inline-block;
+	width: 220px;
+}
+/*brands-block index*/
+.brands-logo {
+	display: inline-block;
+	width: 220px;
+}
+
+/*service-block index*/
+.service {
+	background: #f2f6f8;
+}
+
+.service p {
+	width: 400px;
+}
+
+.inset {
+	width: 300px;
+}
+
+.inset-2, .inset-3 {
+	display: none;
+}
+
+/*info-block index*/
+.info .about-us {
+	width: 550px;
+	float: left;
+}
+
+.info .contact {
+	width: 300px;
+	float: right;
+}
+
+/*MAIN CATALOG*/
+.breadcrumbs li {
+	display: inline-block;
+}
+
+.search {
+	float: left;
+	width: 210px;
+}
+
+.product-gallery {
+	float: right;
+	width: 700px;
+}
+
+.sorting p, .sorting a, {
+	display: inline-block;
+}
+
+.articles .product {
+	width: 220px;
+	display: inline-block;
+}
+
+.accompaniment {
+	clear: both;
+}
+/*FOOTERS*/
+
+/*footer-top*/
+.footer-top {
+	background: #32425c;
+}
+
+.footer-logo {
+	float: left;
+}
+
+.footer-nav {
+	float: right;
+}
+
+.footer-nav li {
+	display: inline-block;
+}
+
+/*footer-middle*/
+
+.footer-middle {
+	background: #32425c;
+}
+
+.footer-middle .contact {
+	float: left;
+	width: 340px;
+}
+
+
+.footer-middle ul {
+	float: right;
+}
+
+.footer-middle li {
+	display: inline-block;
+}
+/*footer-bootom*/
+.footer-bottom {
+	background: #293449;
+}
+
+.footer-copyright {
+	width: 250px;
+	float: left;
+}
+
+.footer-links {
+	width: 550px;
+	float: right;
+}
+
+.footer-social, .footer-contacts, .footer-creators {
+	display: inline-block;
+}  
+
+.footer-social {
+	width: 135px;
+}
+
+.footer-contacts {
+	width: 140px;
+}
+
+.footer-creators {
+	width: 100px;
 }

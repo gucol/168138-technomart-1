@@ -8,27 +8,31 @@
   </head>
   <body>
 	<header class="main-header">
-		<section class="header-top">
+		<section class="header-top clearfix">
 			<div class="container">
-				<a href="">
+				<a class-"header-logo" href="">
 					<img src="img/header-logo.png" width="220" height="47" alt="Логотип Техномарт">
 				</a>
-				<div class="search-input">
-					<input type="text" placeholder="Поиск:">
+				<div class="hdr-gadget">
+					<div class="search-input">
+						<input type="text" placeholder="Поиск:">
+					</div>
+					<a class="marks" href="">Закладки</a>
+					<a class="basket" href="">Корзина</a>
+					<a class="order-btn" href="">Оформить заказ</a>		
 				</div>
-				<a href="">Закладки</a>
-				<a href="">Корзина</a>
-				<a href="">Оформить заказ</a>
-			</div>	
+			</div>			
 		</section>
 		<section class="header-bottom">
 			<div class="container">
-				<p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
-				<div>
+				<div class="hdr-bttm-block">
+					<p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
+				</div>
+				<div class="hdr-bttm-block hdr-contacts">
 					<span>+7(812)555-05-55</span>
 					<span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
 				</div>
-				<div class="user-block">
+				<div class="user-block hdr-bttm-block">
 					<a href="#" class="login">Вход</a>
 					<a href="#" class="check-in">Регистрация</a>
 				</div>
@@ -49,23 +53,15 @@
 	<main>
 		<div class="container">
 			<section class="promo">
-				<div class="item-1">
+				<div class="item item-1">
 					<span>Материалы</span>
 					<a href="">На любой вкус</a>
 				</div>
-				<div class="item-2">
+				<div class="item item-2">
 					<span>Инструмент</span><a href="">На все случаи жизни</a>
 				</div>
-				<div class="item-3">
+				<div class="item item-3">
 					<span>Техника</span><a href="">Для стройки</a>
-				</div>
-				<div class="item-4">
-					<span>Скидки 50%</span>
-					<a href="">на 350 товаров</a>
-				</div>
-				<div class="item-5">
-					<span>Доставка</span>
-					<a href="">Бесплатно</a>
 				</div>
 				<div class="promo-slider">
 					<div class="slider-1">
@@ -81,10 +77,18 @@
 						<a href="">Открыть каталог</a>
 					</div>
 				</div>
+				<div class="item item-4">
+					<span>Скидки 50%</span>
+					<a href="">на 350 товаров</a>
+				</div>
+				<div class="item item-5">
+					<span>Доставка</span>
+					<a href="">Бесплатно</a>
+				</div>
 			</section>	
 			<section class="popular">
-				<div>
-					<h2>Популярные товары:</h2>
+				<div class="sect-hdr clearfix">
+					<h2 >Популярные товары:</h2>
 					<a href="">Все популярные товары</a>
 				</div>
 				<article>
@@ -112,18 +116,18 @@
 				</article>
 			</section>
 			<section class="brands">
-				<div>
+				<div class="sect-hdr clearfix">
 					<h2>Популярные производители:</h2>
 					<a href="">Все производители</a>
 				</div>
-				<a href="#"><img src="img/Bosch.png" width="126" height="37" alt="Bosch"></a>
-				<a href="#"><img src="img/Makita.png" width="123" height="40" alt="Makita"></a>
-				<a href="#"><img src="img/DeWALT.png" width="146" height="44" alt="DeWALT"></a>
-				<a href="#"><img src="img/Interskol.png" width="200" height="88" alt="Интерскол"></a>
-				<a href="#"><img src="img/Hitachi.png" width="169" height="31" alt="Hitachi"></a>
-				<a href="#"><img src="img/LG.png" width="121" height="73" alt="LG"></a>
-				<a href="#"><img src="img/AEG.png" width="151" height="96" alt="AEG"></a>
-				<a href="#"><img src="img/Metabo.png" width="204" height="69" alt="Metabo"></a>
+				<a class="brands-logo" href="#"><img src="img/Bosch.png" width="126" height="37" alt="Bosch"></a>
+				<a class="brands-logo" href="#"><img src="img/Makita.png" width="123" height="40" alt="Makita"></a>
+				<a class="brands-logo" href="#"><img src="img/DeWALT.png" width="146" height="44" alt="DeWALT"></a>
+				<a class="brands-logo" href="#"><img src="img/Interskol.png" width="200" height="88" alt="Интерскол"></a>
+				<a class="brands-logo" href="#"><img src="img/Hitachi.png" width="169" height="31" alt="Hitachi"></a>
+				<a class="brands-logo" href="#"><img src="img/LG.png" width="121" height="73" alt="LG"></a>
+				<a class="brands-logo" href="#"><img src="img/AEG.png" width="151" height="96" alt="AEG"></a>
+				<a class="brands-logo" href="#"><img src="img/Metabo.png" width="204" height="69" alt="Metabo"></a>
 			</section>
 		</div>
 		<div class="container">
@@ -131,27 +135,24 @@
 				<h2>Сервисы</h2>
 				<p>Хороший интернет-магазин отличается от плохого не только ценами!Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 				<div class="service-slider">
-					<div class="inset-1">
+					<div class="inset inset-1 clearfix">
 						<h3>Доставка</h3>
 						<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш на этаж!</p>
-						<img src="img/delivery.png" width="468" height="261" alt="Доставка">
 					</div>
-					<div class="inset-2">
+					<div class="inset inset-2 clearfix">
 						<h3>Гарантия</h3>
 						<p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-						<img src="img/guarantee.png" width="389" height="283" alt="Гарантия">
 					</div>
-					<div class="inset-3">
+					<div class="inset inset-3 clearfix">
 						<h3>Кредит</h3>
 						<p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
-						<img src="img/credit.png" width="465" height="285" alt="Кредит">
 						<a href="">Отправить заявку</a>
 					</div>
 				</div>	
 			</section>
 		</div>
 		<div class="container">
-			<section class="info">
+			<section class="info clearfix">
 				<div class="about-us">
 					<h2>Компания &laquo;Техномарт&raquo;</h2>
 					<p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкномить на гастарбайтерах.</p>
@@ -174,7 +175,7 @@
 	</main>
 	<footer class="main-footer">
 		<div class="container">
-			<section class="footer-top">
+			<section class="footer-top clearfix">
 				<img class="footer-logo" src="img/footer-logo.png" width="220" height="68" alt="Логотип Техномарт">
 				<nav class="footer-nav">
 					<ul>
@@ -186,7 +187,7 @@
 					</ul>
 				</nav>
 			</section>
-			<section class="footer-middle">
+			<section class="footer-middle clearfix">
 				<section class="contact">
 					<p>г.Санкт-Петербург, ул.Конюшенная, д. 19/8</p>
 					<p>+7 (812) 555-05-55</p>
@@ -200,23 +201,25 @@
 			</section>
 		</div>
 		<div class="container">
-			<section class="footer-bottom">
+			<section class="footer-bottom clearfix">
 				<section class="footer-copyright">
 					<p>&copy; 2010-2016 Компания &laquo;Техномарт&raquo; Все права защищены</p>
 				</section>
-				<section class="footer-social">
-	          		<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-	          		<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-	          		<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-				</section>
-				<section class="footer-contacts">
-					<p>Обратная связь:</p>
-	          		<a href="mailto: mail@htmlcademy.ru">mail@htmlcademy.ru</a>
-				</section>
-				<section class="footer-creators">
-					<p>Разработано - </p>
-	          		<a href="https://htmlacademy.ru">HTML Academy</a>
-				</section>
+				<div class="footer-links">
+					<section class="footer-social">
+		          		<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+		          		<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+		          		<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+					</section>
+					<section class="footer-contacts">
+						<p>Обратная связь:</p>
+		          		<a href="mailto: mail@htmlcademy.ru">mail@htmlcademy.ru</a>
+					</section>
+					<section class="footer-creators">
+						<p>Разработано - </p>
+		          		<a href="https://htmlacademy.ru">HTML Academy</a>
+					</section>
+				</div>			
 			</section>
 		</div>	
 	</footer>
