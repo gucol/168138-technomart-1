@@ -11,15 +11,15 @@
 	<header class="main-header">
 		<section class="header-top clearfix">
 			<div class="container">
-				<a class="header-logo" href="">
+				<a class-"header-logo" href="">
 					<img src="img/logo.png" width="110" height="18" alt="Логотип Техномарт">
 				</a>
 				<div class="header-gadget">
 					<div class="search-input">
 						<input type="text" placeholder="Поиск:">
 					</div>
-					<a class="marks" href="">Закладки</a>
-					<a class="basket" href="">Корзина</a>
+					<a class="marks" href="">Закладки: 0</a>
+					<a class="basket" href="">Корзина: 0</a>
 					<a class="order-btn" href="">Оформить заказ</a>		
 				</div>
 			</div>			
@@ -34,7 +34,7 @@
 					<span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
 				</div>
 				<div class="header-auth">
-					<a href="#" class="login">Вход</a>
+					<a href="#" class="login">Войти</a>
 					<a href="#" class="check-in">Регистрация</a>
 				</div>
 				<nav class="main-menu">
@@ -55,7 +55,7 @@
 		<div class="container">
 			<div class="breadcrumbs">
 				<ul>
-					<li><a href="index.html"></a></li>
+					<li ><a class="index-crumb" href="index.html">Главная</a></li>
 					<li><a href="">Каталог</a></li>
 					<li><a href="">Инструмент</a></li>
 					<li><a href="">Перфораторы</a></li>
@@ -75,8 +75,8 @@
                              	<div class="toggle max-toggle"></div>
                          	</div>
                          	<div class="price-controls">
-                            	OТ<input class="min-price" type="text" value="0">
-                            	ДО<input class="max-price" type="text" value="30000">
+                            	<span>OТ</span><input class="min-price" type="text" value="0"> -
+                            	<span>ДО</span><input class="max-price" type="text" value="30000">
                          	</div>
                       	</div>                  
                     <h4>Производители</h4>
@@ -122,21 +122,27 @@
 			</section>
 			<section class="product-gallery">
 				<div class="sorting">
-                    <p>Сортировать:</p>
-                    <a href="#">по цене</a>
+                    <p>Сортировка:</p>
+                    <a href="#" class="active">по цене</a>
                     <a href="#">по типу</a>
                     <a href="#">по функционалу</a>
                     <div class="pointers">
-                        <a class="active arrow bottom" href="#">по возрастанию</a>
-                        <a class="arrow up" href="#">по убыванию</a>
+                        <a class="active arrow up" href="#">по убыванию</a>
+                        <a class=" arrow bottom" href="#">по возрастанию</a>
                     </div>
                 </div>
                 <div class="articles">
                 	<article class="product">
-                		<img src="img/perforator-2.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                		<div class="gallery-img">
+                			<img src="img/perforator-2.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                		</div>
+                		
 						<span class="prod-name">Перфоратор BOSCH BFG 3000</span>
 						<span class="old-price">22500 р.</span>
-						<a href="">15500 р.</a>
+						<div class="product-btn">
+							<a class="new-price" href="">15500 р.</a>
+						</div>
+						
 						<div class="hover-product">
 							<a href="">купить</a>
 							<a href="">в закладки</a>
@@ -231,9 +237,12 @@
                 </div>
 			</section>
 		</div>
-		<div class="accompaniment container">
-			<h2>Пара слов о перфораторах</h2>
-			<p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+		<div class="accompaniment ">
+			<div class="container">
+				<h2>Пара слов о перфораторах</h2>
+				<p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+			</div>
+			
 		</div>
 	</main>
 	<footer class="main-footer">
@@ -253,7 +262,7 @@
 		</section>
 		<section class="footer-middle clearfix">
 			<div class="container">
-				<section class="contact">
+				<section class="contact-bottom">
 					<p>г.Санкт-Петербург, ул.Конюшенная, д. 19/8</p>
 					<p>+7 (812) 555-05-55</p>
 				</section>
