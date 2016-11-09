@@ -309,37 +309,86 @@ h4 {
 /*promo-block index*/
 .promo {
 	padding-top: 59px;
-	padding-bottom: 16px;
+	padding-bottom: 24px;
 	font-size: 0px;
 }
 .promo .item {
-	width: 300px;
-	min-height: 123px;
-	display: inline-block;
+    padding-left: 23px;
+    width: 300px;
+    min-height: 123px;
+    padding-top: 21px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.promo span {
+	margin-bottom: 12px;
+	display: block;
+	font-family: "Cuprum", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	color: #fff;
+}
+
+.item a {
+    display: inline-block;
+    font-family: "Cuprum", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+	opacity: 1;
+    padding: 10px 30px;
+    position: relative;
+}
+
+.item a::before {
+	border-radius: 3px;
+    position: absolute;
+    content: "";
+    width: 136px;
+    top: 0px;
+    left: 0px;
+    background-color: #000;
+    opacity: .1;
+    height: 38px;
+}
+
+.item a:hover::before {
+	opacity: .2;
+}
+
+.item a:active::before {
+	opacity: .3;
 }
 
 .item-1 {
-	background: #f6b22d;
 	margin-right: 20px;
+	background:#f6b22d url("../img/materials.png") no-repeat;	
+	background-position: 213px 31px;
 }
 
 .item-2 {
-	background: #4aafde;
+	background: #4aafde url("../img/instrument.png") no-repeat;
 	margin-right: 20px;
-	
+	background-position: 197px 33px;	
 }
 .item-3 {
-	background: #cc79d1;
+	background: #cc79d1 url("../img/tractor.png") no-repeat;
 	margin-bottom: 20px;
-	
+	background-position: 191px 31px;
 }
 
 .item-4{
-	background: #85d179;
+	background: #85d179 url("../img/discounts.png") no-repeat;
 	margin-bottom: 20px;
+	background-position: 196px 26px;
 }
 .item-5 {
-	background: #f6b22d;
+	background: #f6b22d url("../img/car.png") no-repeat;
+	background-position: 191px 32px;
 }
 
 .promo-slider {
@@ -367,6 +416,7 @@ h4 {
 	background: #f7f3ec;
 	position: relative;
 	margin-right: 20px;
+	margin-bottom: 20px;
 }
 .popular h2, .brands h2{
 	padding: 30px 0px 29px 27px;
@@ -401,32 +451,31 @@ h4 {
 
 
 
-.product, .brands-logo {
+.pop-product, .brands-logo {
 	display: inline-block;
 	border: 1px solid #e5e5e5;
-	width: 220px;
-	margin-left: 20px; 
+    width: 218px;
+    margin-right: 17px;
+    padding-bottom: 20px;
+    margin-bottom: 4px;
 }
 
-.product:first-child {
-	margin-left: 0px;
+.pop-product:last-child {
+	margin-right: 0px;
 }
 
-.brands-logo {	
-	min-height: 145px;
-	position: relative;
-}
 
 .product-img {
-	height: 320px;
 	position: relative;
+	    margin-top: 17px;
+    margin-bottom: 179px;
 }
 
-.product-img > img, .brands-logo > img  {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translateX(-50%) translateY(-50%);
+.product-img > img  {
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    transform: translateX(-50%);
 }
 
 .prod-name {
@@ -447,7 +496,8 @@ h4 {
 	text-transform: uppercase;
 }
 
-.product a {
+.product a,
+.pop-product a {
 	padding: 10px 20px;
 	background-color: #ee3643;
 	text-transform: uppercase;
@@ -460,26 +510,126 @@ h4 {
 	display: inline-block;
 }
 
+.brands {
+	margin-bottom: 65px;
+}
+
+.brands-logo {	
+	min-height: 123px;
+    position: relative;
+    vertical-align: bottom;
+    margin-bottom: 20px;
+}
+
+.brands-logo::after {	
+    position: absolute;
+    content: "";
+    top: 0px;
+    width: 218px;
+    left: 0px;
+    height: 144px;
+}
+.brands-logo img {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.brands-logo:hover::after {
+	box-shadow: 0px 10px 25px #293449;
+	opacity: .5;
+}
+
+.brands-logo:active {
+	opacity: .3;
+}
+
+.brands-logo:active::after {
+	box-shadow: 0px 4px 10px #293449;
+	opacity: .5;
+}
+
 /*service-block index*/
 .service {
-	background: #f2f6f8;
+    background: #f2f6f8;
+    padding-top: 17px;
+    padding-bottom: 91px;
 }
 
+.service h2 {
+	padding-left: 0px;
+}
 .service p {
 	width: 400px;
+	margin-top: -6px;
 }
 
-.inset {
+.slider {
+	float: left;
+	    min-width: 240px;
+}
+
+.slider ul {
+	padding-left: 0px;
+}
+.slider li {
+	list-style: none;
+}
+
+.slider input[type="button"] {
+    padding: 15px 23px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    margin: 0px;
+    background-color: #32425c;
+
+    font-family: "Cuprum", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+	font-size: 21px;
+	line-height: 30px;
+	color: #e4e6e9;	
+}
+
+#active-input {
+	background-color: #fff;
+	color: #32425c;
+}
+.slides {
+	float: right;
+	min-height: 296px;
+}
+.slide {
+	width: 640px;
+}
+
+.slide h3 {
+    font-family: "Cuprum", Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    line-height: 24px;
+    color: #32425c;
+    text-transform: uppercase;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 17px;
+    padding-bottom: 36px;
+    background-color: transparent;
+}
+
+.slide p {
 	width: 300px;
 }
-
-.inset-2, .inset-3 {
+.slide-2, .slide-3 {
 	display: none;
 }
 
+.slide-1 {
+	background: transparent url("../img/delivery.png") 151px 36px no-repeat;
+}
 /*info-block index*/
 .info {
-	padding-top: 50px;
+	padding-top: 32px;
 	padding-bottom: 85px; 
 }
 
@@ -491,16 +641,35 @@ h4 {
 .info .contact {
 	width: 300px;
 	float: right;
+	margin-right: 20px;
 }
-
+.about-us h2, .contact h2 {
+	margin: 0;
+	padding: 0;
+	background: transparent;
+}
 .about-us p, .contact p {
+	margin-top: 26px;
 	font-family: "Cuprum", Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	line-height: 24px;
 	color: #000;
 }
 
+.about-us p {
+	min-width: 535px;
+}
+.contact p {
+	min-width: 200px;
+}
+
+.about-us ul {
+	margin-top: 19px;
+	list-style: none;
+	margin-bottom: 36px;
+}
 .about-us li {
+	margin-bottom: 20px;
 	font-family: "Cuprum", Arial, Helvetica, sans-serif;
 	font-size: 18px;
 	line-height: 20px;
@@ -930,7 +1099,8 @@ input[type='radio']:checked ~ span:disabled::before{
 }
 
 .articles .product {
-    width: 218px;
+	border: 1px solid #e5e5e5;
+    width: 216px;
     display: inline-block;
     vertical-align: top;
     margin-right: 16px;
