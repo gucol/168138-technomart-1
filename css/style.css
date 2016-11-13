@@ -36,19 +36,16 @@ h4 {
 }
 
 .new::before {
-	position: absolute;
-	top: 0px; 
-	right: 0px;
-	content: "new";
-	color: #fff;
-	text-align: center;
-	vertical-align: middle;
-	background: #ee3643;
-	width: 65px;
-	height: 18px;
-	transform: rotate(45deg);
+    z-index: 30;
+    position: absolute;
+    top: 0px;
+    /* border: 1px solid green; */
+    right: 0px;
+    content: "";
+    width: 60px;
+    height: 59px;
+    background: transparent url(../img/new.png) 0 0 no-repeat;
 }
-
 
 /*HEADER*/
 .header-top {
@@ -345,6 +342,7 @@ h4 {
 	font-size: 0px;
 }
 .promo .item {
+	    position: relative;
     padding-left: 23px;
     width: 300px;
     min-height: 123px;
@@ -402,6 +400,14 @@ h4 {
 	background-position: 213px 31px;
 }
 
+.item-1::before {
+    top: 0px;
+    right: 0px;
+    content: "";
+    width: 60px;
+    height: 59px;
+    background: transparent url(../img/new.png) 0 0 no-repeat;
+}
 .item-2 {
 	background: #4aafde url("../img/instrument.png") no-repeat;
 	margin-right: 20px;
@@ -477,11 +483,13 @@ h4 {
     text-decoration: none;
 }
 
-.promo-slide a:hover {
+.promo-slide a:hover, 
+.buy-btns a:hover {
     background: #ca2c37;
 }
 
-.promo-slide a:active {
+.promo-slide a:active,
+.buy-btns a:active {
     background: #ba2732;
 }
 .promo-slide-2 {
@@ -1717,4 +1725,255 @@ position: absolute;
 .footer-contacts a:active, .footer-creators a:active {
 	color: #c73644;
 	text-decoration: none;
+}
+
+/*popups*/
+.map-popup, .buy-popup, .contact-popup  {
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.map-popup {
+	display: none;
+	min-width: 940px;
+	min-height: 445px;
+	z-index: 99;
+	background: url("../img/big-map.png") 0 0 no-repeat;
+}
+
+.buy-popup {
+	z-index: 100;
+
+	padding-top: 40px;
+    background: #fff;
+    border-top: 7px solid #ee3643;
+    box-shadow: 0px 20px 40px #293449;
+}
+
+.modal-content-close {
+
+position: absolute;
+  top: 9px;
+  right: 9px;
+
+  width: 22px;
+  height: 22px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+  	right: -2px;
+    width: 24px;
+    height: 4px;
+    background-color: #ee3643;
+    border-radius: 1px;
+    
+}
+
+.modal-content-close::before {
+  transform: rotate(45deg);
+
+}
+
+.modal-content-close::after {
+  transform: rotate(-45deg);
+}
+
+.map-popup .modal-content-close::before,
+.map-popup .modal-content-close::after {
+	    top: 25px;
+	    right: 9px;
+}
+
+.buy-popup .modal-content-close::before {
+	top: 10px;
+    right: -2px;
+}
+
+.buy-popup .modal-content-close::after {
+	    top: 8px;
+    right: -1px;
+}
+
+.buy-popup p {
+	font-family: "Cuprum", Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	line-height: 18px;
+	color: #000;
+	padding-bottom: 46px;
+    padding-left: 179px;
+}
+
+.buy-popup p::before {
+	position: absolute;
+	content: "";
+	top: 50px;
+	left: 80px;
+	background-color: #63a63e;
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+}
+
+.buy-popup p::after {
+    position: absolute;
+    content: "";
+    top: 61px;
+    left: 103px;
+    border-right: 6px solid #fff;
+    border-bottom: 6px solid #fff;
+    width: 15px;
+    height: 30px;
+    transform: rotate(45deg);
+}
+
+.buy-btns {
+	background-color: #f1f1f1;
+	padding: 35px 80px;
+}
+
+.buy-btns a  {
+	margin-right: 16px;
+    background: #ee3643;
+    padding: 10px 61px;
+    border-radius: 3px;
+    font-family: "Cuprum", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.buy-btns button {
+	cursor: pointer;
+    background: #fff;
+    padding: 10px 47px;
+    border-radius: 3px;
+    font-family: "Cuprum", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    border: none;
+}
+
+.buy-btns button:hover {
+ 		border-color: #bdc6ca;
+}
+
+.buy-btns button:active {
+border-color: #ee3643;
+	outline: none;
+}
+
+.buy-btns button:focus {
+	border-color: #ee3643;
+	outline: none;
+}
+
+.contact-popup {
+	padding-top: 50px;
+	width: 620px;
+	background-color: #fff;
+	font-family: "Cuprum", Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	line-height: 18px;
+	color: #000;	
+	border-top: 7px solid #ee3643;
+    box-shadow: 0px 20px 40px #293449;
+    
+    box-sizing: border-box;
+}
+.contact-popup .popup-col {
+	max-width: 220px;
+	margin-bottom: 20px;
+}
+.contact-popup .popup-col1 {
+	float: left;
+	margin-left: 80px;
+}
+
+.contact-popup .popup-col2 {
+	float: right;
+	margin-right: 80px;
+}
+
+.contact-popup input {
+	border: 2px solid #d7dcde;
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+    border-radius: 3px;
+
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	color: #999;
+
+	padding-left: 15px;
+}
+
+.contact-popup .textarea {
+	clear: both;
+}
+
+.textarea .comment-label {
+	margin-left: 80px;
+	display: block;
+}
+
+textarea {
+
+	border: 2px solid #d7dcde;
+    border-radius: 3px;
+
+	font-family: "PT Sans", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	color: #999; 
+
+	display: block;
+    overflow: auto;
+    width: 428px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 10px;
+    height: 92px;
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 10px 15px;
+}
+
+.contact-popup .finish-input {
+	background: #f1f1f1;
+	padding: 10px 10px 10px;
+}
+.contact-popup .contact-popup-btn {
+	width: 461px;
+background: #ee3643;
+border: none;
+    border-radius: 3px;
+    font-family: "Cuprum", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    margin-left: 80px;
+    margin-right: 80px;
 }
