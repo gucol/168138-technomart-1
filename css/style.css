@@ -922,6 +922,7 @@ label.checked::before {
 .about-us a {padding: 10px 40px;}
 
 .contact .map {
+	cursor: pointer;
 	background: url("../img/map.jpg") no-repeat;
 	margin-top: 31px;
     margin-bottom: 41px;
@@ -1729,18 +1730,19 @@ position: absolute;
 
 /*popups*/
 .map-popup, .buy-popup, .contact-popup  {
+	display: none;
 	position: fixed;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
 .map-popup {
-	display: none;
 	min-width: 940px;
 	min-height: 445px;
 	z-index: 99;
 	background: url("../img/big-map.png") 0 0 no-repeat;
 }
+
 
 .buy-popup {
 	z-index: 100;
@@ -1750,6 +1752,7 @@ position: absolute;
     border-top: 7px solid #ee3643;
     box-shadow: 0px 20px 40px #293449;
 }
+
 
 .modal-content-close {
 
@@ -1976,4 +1979,11 @@ border: none;
 
     margin-left: 80px;
     margin-right: 80px;
+}
+
+.map-popup-show,
+.buy-popup-show,
+.contact-popup-show
+ {
+	display: block;
 }
