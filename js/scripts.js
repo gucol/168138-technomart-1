@@ -1,25 +1,11 @@
+
+		
 //переменные для карты
 		var MapLink = document.querySelector(".map");
 		var MapPopup = document.querySelector(".map-popup");
 		var MapClose = MapPopup.querySelector(".map-popup-close");
-//переменные для формы "написать нам"
-		var ContactLink = document.querySelector(".search-us");
-		var ContactPopup = document.querySelector(".contact-popup");
-		var ContactClose = ContactPopup.querySelector(".contact-popup-close");
-		
-		var ContactForm = ContactPopup.querySelector("form");
-		var ContactName = ContactPopup.querySelector("[name=name]");
-		var ContactEmail = ContactPopup.querySelector("[name=email]");
-
-		var StorageName = localStorage.getItem("name");
-//объявление переменных для buy-popup
-		var BuyLink = document.querySelectorAll(".buy");
-		var BuyPopup = document.querySelector(".buy-popup");
-//Uncaught TypeError: Cannot read property 'querySelector' of null(…)
-		var BuyClose = BuyPopup.querySelector(".buy-popup-close");
 
 //MAP-POPUP
-//не ловятся клики по карте.
 //открытие карты
 		MapLink.addEventListener("click", function(event){
 			event.preventDefault();
@@ -38,6 +24,19 @@
 				}
 			}
 		});
+
+
+//переменные для формы "написать нам"
+		var ContactLink = document.querySelector(".search-us");
+		var ContactPopup = document.querySelector(".contact-popup");
+		var ContactClose = ContactPopup.querySelector(".contact-popup-close");
+		
+		var ContactForm = ContactPopup.querySelector("form");
+		var ContactName = ContactPopup.querySelector("[name=name]");
+		var ContactEmail = ContactPopup.querySelector("[name=email]");
+
+		var StorageName = localStorage.getItem("name");
+
 
 //CONTACT-POPUP
 //открытие popup "написать нам"
@@ -78,12 +77,19 @@
 			}	
 		});
 
+
+//объявление переменных для buy-popup
+		var BuyLink = document.querySelector(".buy");
+		var BuyPopup = document.querySelector(".buy-popup");
+		var BuyClose = BuyPopup.querySelector(".buy-popup-close");
+		var BuyBasket = document.querySelector(".basket");
+
 //BUY-POPUP		
-//ошибка: catalog.html:373 Uncaught TypeError: BuyLink.addEventListener is not a function(…)
 //открытие popup:
 		BuyLink.addEventListener("click", function(event){
 			event.preventDefault();
 			BuyPopup.classList.add("buy-popup-show");
+			BuyBasket.classList.add("basket-active");
 		});
 
 //закрытие popup "написать нам"
