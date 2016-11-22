@@ -313,7 +313,7 @@ h4
     float: left;
 }
 
-.header-description p
+.header-description
 {
     font-family: 'Cuprum', 'Arial', 'Helvetica', sans-serif;
     font-size: 16px;
@@ -1496,7 +1496,8 @@ h2.catalog
     position: relative;
 
     display: inline-block;
-    vertical-align: baseline;
+    vertical-align: middle;
+
 
     padding-right: 35px;
 }
@@ -1955,34 +1956,34 @@ input[type='radio']:checked ~ span:disabled::before
     border-left-width: 5px;
     border-left-color: transparent;
 }
-.up::before
+.sorting .up::before
 {
     border-top-width: 0;
 }
-.bottom::before
+.sorting .bottom::before
 {
     border-bottom-width: 0;
 }
-.up:hover::before
+.sorting .up:hover::before
 {
     border-bottom-color: #010101;
 }
-.bottom:hover::before
+.sorting .bottom:hover::before
 {
     border-top-color: #010101;
 }
 
-.up:active::before
+.sorting .up:active::before
 {
     border-bottom-color: #ee3643;
 }
 
-.bottom:active::before
+.sorting .bottom:active::before
 {
     border-top-color: #ee3643;
 }
 
-.active::before
+.sorting .active::before
 {
     border-bottom-color: #ee3643;
 }
@@ -2120,11 +2121,13 @@ input[type='radio']:checked ~ span:disabled::before
 .new-price::after
 {
     position: absolute;
-    top: 9px;
-    left: 97px;
-
+    top: 0px;
+    left: 105px;
+    width: 20px;
     content: '';
-    -webkit-transform: rotate(-90deg);
+    background: url('../img/btn-tag.png') 0px 0px no-repeat;
+    height: 38px;
+  /*  -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg);
     vertical-align: baseline;
@@ -2134,7 +2137,7 @@ input[type='radio']:checked ~ span:disabled::before
     border-right-color: transparent;
     border-bottom: none;
     border-left-width: 19px;
-    border-left-color: transparent;
+    border-left-color: transparent;*/
 }
 
 .hover-product
@@ -2449,7 +2452,7 @@ input[type='radio']:checked ~ span:disabled::before
 .footer-creators
 {
     display: inline-block;
-    vertical-align: baseline;
+    vertical-align: middle;
 }
 
 .footer-social
