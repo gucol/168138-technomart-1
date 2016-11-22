@@ -86,7 +86,7 @@ if(ContactForm){
 if(document.querySelector(".buy")){
 	var BuyLink = document.querySelectorAll(".buy");
 	var BuyPopup = document.querySelector(".buy-popup");
-	var BuyClose = BuyPopup.querySelector(".buy-popup-close");
+	var BuyClose = document.querySelector(".buy-popup-close");
 	var BuyBasket = document.querySelector(".basket");
 }
 		
@@ -118,3 +118,4 @@ if(BuyClose){
 		}
 	});
 }
+
