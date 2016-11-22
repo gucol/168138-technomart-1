@@ -1228,16 +1228,30 @@ label.checked::before
 
     color: #e4e6e9;
     border: none;
+    outline: none;
     border-top: 1px solid #405069;
     border-bottom: 1px solid #293449;
     background-color: #32425c;
 }
 
-#active-input
+.slider input[type='button']:hover 
 {
+    background-color: #293449;
+    padding: 16px 23px;
+    border-top: none;
+    border-bottom: none;
+}
+
+#active-input, 
+#active-input:hover,
+.slider input[type='button']:active
+{
+    padding: 16px 23px;
     color: #32425c;
     border: none;
     background-color: #fff;
+    border-top: none;
+    border-bottom: none;
 }
 .slides
 {
@@ -2246,11 +2260,11 @@ input[type='radio']:checked ~ span:disabled::before
 
 .btn-catalog
 {
+    font-size: 13px;
+    line-height: 16px;
     margin-right: 6px;
     padding: 10px 15px;
-
     text-decoration: none;
-
     color: #000;
 }
 .btn-catalog:last-child
