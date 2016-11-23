@@ -192,21 +192,37 @@ h4
 .search-input input[type='search']:focus
 {
     color: #000;
-    z-index: 300;
     outline: none;
-    background: #fff url('../img/main-sprite.png') 17px -25px no-repeat;
+    background: #fff;
 }
 
 .search-input label
 {
-    display: none;
+    position: relative;
+    font-size: 0px;
+    display: inline-block;
+    vertical-align: baseline;
+}
+.search-input input:focus + label:before
+{
+    position: absolute;
+    top: -13px;
+    right: 218px;
+
+    width: 25px;
+    height: 31px;
+
+    content: '';
+
+    opacity: 1;
+    background: #fff url('../img/main-sprite.png') 0 -26px no-repeat;
 }
 
 .marks
 {
     position: relative;
 
-    padding: 11px 28px 12px 54px;
+    padding: 11px 28px 11px 54px;
 }
 
 .marks::before
@@ -235,7 +251,7 @@ h4
     position: relative;
 
     box-sizing: border-box;
-    padding: 11px 26px 12px 50px;
+    padding: 11px 26px 11px 50px;
 }
 .basket-active
 {
@@ -312,6 +328,10 @@ h4
     color: #ee3643;
 }
 
+.header-description p
+{
+    margin: 0;
+}
 .header-contacts
 {
     font-family: 'Cuprum', 'Arial', 'Helvetica', sans-serif;
@@ -1483,7 +1503,7 @@ h2.catalog
 .breadcrumbs
 {
     margin-top: 18px;
-    margin-bottom: 17px;
+    margin-bottom: 16px;
 }
 .breadcrumbs ul
 {
@@ -2022,9 +2042,9 @@ input[type='radio']:checked ~ span:disabled::before
 {
     position: absolute;
     top: 0;
-    left: -1;
+    left: 0;
 
-    width: 220px;
+    width: 219px;
     height: 317px;
 
     content: '';
@@ -2305,10 +2325,11 @@ input[type='radio']:checked ~ span:disabled::before
     background: #32425c;
 }
 
-.footer-logo
+img.footer-logo
 {
     float: left;
 }
+
 
 .footer-top ul
 {
@@ -2337,6 +2358,11 @@ input[type='radio']:checked ~ span:disabled::before
     color: #fff;
 }
 
+a.footer-logo
+{
+    margin: 0px;
+    font-size: 0px;
+}
 
 /*footer-middle*/
 
